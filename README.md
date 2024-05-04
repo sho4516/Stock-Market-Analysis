@@ -19,7 +19,7 @@ To illustrate the use of Promise api and Async/Await in JavaScript
 
 ## Demo
 
-[https://sho4516.github.io/Music-Player-JS/](https://sho4516.github.io/Stock-Market-Analysis/)
+https://sho4516.github.io/Stock-Market-Analysis
 
 ## Screenshots
 
