@@ -14,20 +14,22 @@ async function createChart(timeFrame, stockName){
         const extractedData = data.stocksData[0][stockName][timeFrame];
         const values = extractedData.value;
         const timeStamps = extractedData.timeStamp;
-        console.log(values);
-        console.log(timeStamps);
+        const newTime_stamp = timeStamps.map((data)=>{
+            return new Date(data*1000).toLocaleString();
+        });
         const trace = {
-            x: timeStamps,
+            x: newTime_stamp,
             y: values,
             type: 'scatter',
             mode: 'lines',
-            marker: { color: 'green' }
+            marker: { color: 'green' },
+            hoverinfo: 'y+text',
+            text: newTime_stamp
         };
     
         // Define layout options for the chart
         const layout = {
             xaxis: {
-                // title: 'X Axis',
                 showticklabels: false // Hide tick labels on the x-axis
             },
             yaxis: {
@@ -42,7 +44,8 @@ async function createChart(timeFrame, stockName){
                 b: 0
             },
             hovermode: 'x',
-            hoverdistance: 20
+            hoverdistance: 20,
+            shapes: [],
         };
     
         // Plot the chart inside the div with class "chart"
@@ -99,7 +102,7 @@ async function renderSummary(stock, bookV, p){
             <span id="profit">${p}%</span>
         </div>
         <div class="summary-content">
-            <p>
+            <p style="font-size: 'smaller';">
                 ${summary}
             </p>
         </div>
