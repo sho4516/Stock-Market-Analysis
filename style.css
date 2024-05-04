@@ -19,7 +19,7 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     width: 65%;
-    border: 1px solid black;
+    border-radius: 15px;
 }
 
 .list-section{
@@ -55,4 +55,42 @@ body{
 
 .list-section-item button:hover{
     background-color: rgb(1 1 41);
+}
+
+
+#chart{
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 4rem;
+}
+
+#chart-buttons{
+    background-color: rgb(1 1 102);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+#chart-buttons button{
+    background-color: rgb(1 1 41);
+    border-radius: 15px;
+    border: none;
+    width: max-content;
+    color: white;
+    padding: 0.5rem;
+    font-size: larger;
+    cursor: pointer;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#chart-buttons button:hover{
+    background-color: rgb(1 1 102);
+}
+
+.summary-heading span{
+    margin-right: 1rem;
+    font-weight: bolder;
+    font-size: larger;
 }
