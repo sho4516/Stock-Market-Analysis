@@ -9,7 +9,7 @@ Stock Market Analysis Created with HTML/CSS/JS
 ## Features
 
 - Fetch List of Stocks and it's prices via API
-- Display in form of chart
+- Display in form of chart - using Plotly.js
 - Toggle between chart data of 1 Month/3 Months/1 Year/5 Years
 
 ## Objective
